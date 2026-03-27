@@ -1,7 +1,7 @@
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   PieChart, Pie, Cell, Tooltip, ResponsiveContainer,
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Legend,
+  LineChart, Line, XAxis, YAxis, CartesianGrid,
   BarChart, Bar
 } from "recharts";
 
@@ -191,7 +191,6 @@ export default function GhostSpend() {
   const [error, setError] = useState("");
   const [tab, setTab] = useState("upload"); // upload | dashboard | insights
   const [manualForm, setManualForm] = useState({ amount:"", category:"", date:"", description:"" });
-  const [csvText, setCsvText] = useState("");
   const [inputMode, setInputMode] = useState("manual"); // manual | csv
   const fileRef = useRef();
 
