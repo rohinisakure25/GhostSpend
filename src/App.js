@@ -205,7 +205,6 @@ export default function GhostSpend() {
       try {
         const parsed = parseCSV(ev.target.result);
         setExpenses(parsed);
-        setCsvText(ev.target.result);
         setError("");
       } catch {
         setError("Failed to parse CSV. Check format: date,amount,category,description");
